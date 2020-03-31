@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор полей допуска</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.typekit.net/nxw4uqt.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="calculator">
+	<div class="container">
+     
+         <div class="card-header">
+            ГОСТ 1758-81
+         </div>
+        <div>Передачи зубчатые конические и гипоидные</div>
+        <div>Допуски</div>
+        
+		<form action="">
+			<h2>Калькулятор_допусков_Sc</h2>
+			<p>Требуемые параметры</p>
+			<label for="diametrDel">Средний_делительный_диаметр,мм</label>
+			<input type="number" name="diametrDel" class="currency" v-model.number="diametrDel"/>
+			<br />
+			<label for="ugol">Угол_делительного_конуса,град </label>
+			<input type="number" name="ugol" class="currency" v-model.number="ugol"/>
+			<br />
+			
+			<label for="modul">Модуль</label>
+			<input type="number" name="modul" class="currency" v-model.number="modul"/>
+			<br />
+			
+			<label for="stepen">Степень_точности_плавности_хода </label>
+			<select name="stepen" v-model="stepen">
+				<option value="4">4-я степень</option>
+				<option value="5">5-я степень</option>
+				<option value="6">6-я степень </option>
+				<option value="7">7-я степень</option>
+				<option value="8" selected>8-я степень</option>
+				<option value="9">9-я степень</option>
+				<option value="10">10-я степень</option>
+				<option value="11">11-я степень</option>
+				<option value="12">12-я степень</option>
+			</select>
+			<label for="vidsopr">Вид_сопряжения </label>
+			<select name="vidsopr" v-model="vidsopr">
+				<option value="1">A</option>
+				<option value="2" selected>B</option>
+				<option value="3">C</option>
+				<option value="4">D</option>
+				<option value="5" >E</option>
+				<option value="6">H</option>
+			</select>
+			<label for="vidzazor">Вид_допуска_на_боковой_зазор </label>
+			<select name="vidzazor" v-model="vidzazor">
+				<option value="1">a</option>
+				<option value="2" selected>b</option>
+				<option value="3">c</option>
+				<option value="4">d</option>
+				<option value="5" >h</option>
+			</select>
+			
+		</form>
+        <p>Вывод результатов</p>
+		<div class="payment">Escs={{ Escs }} </div>
+	    <div class="payment">Tsc={{ Tsc }} </div>
+        <div class="payment">Escs+Tsc={{ Escs + Tsc}}</div>
+       <br>
+        <br>
+       <div class="myfooter">
+        ОГК ПАО "ЗАРЕМ"  2020
+      </div>
+        
+     		
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
